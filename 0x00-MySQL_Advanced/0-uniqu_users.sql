@@ -1,7 +1,7 @@
 -- Create table 'user' if it doesn't already exist
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
-    id INT PRIMARY KEY AUTO_INCREMENT, -- Primary key column, auto-incrementing
-    email VARCHAR(256), -- Email column with a maximum length of 256 characters
-    name VARCHAR(256) -- Name column with a maximum length of 256 characters
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    name VARCHAR(255)
 );
